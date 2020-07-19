@@ -1,0 +1,40 @@
+/* Custom shadows */
+@mixin shadow-none {
+  box-shadow: none !important
+}
+
+@mixin shadow-sm {
+  .theme--dark & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+  .theme--light & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+}
+
+@mixin shadow-md {
+  .theme--dark & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+  .theme--light & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+}
+
+@mixin shadow-lg {
+  .theme--dark & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+  .theme--light & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+}
+
+@mixin shadow-xl {
+  .theme--dark & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+  .theme--light & {
+    box-shadow: 0 2px 43px -4px rgba(0,0,0,0.1) !important
+  }
+}

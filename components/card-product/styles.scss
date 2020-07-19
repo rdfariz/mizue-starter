@@ -1,0 +1,29 @@
+@import '~/assets/styles';
+
+.mz-card {
+  &--shadow {
+    @include shadow-lg;
+    border-radius: $rounded-lg !important;
+
+    &::before {
+      border-radius: $rounded-lg;
+      background-color: transparent !important;
+    }
+  }
+
+  &--hover {
+    @include shadow-none;
+    border-radius: $rounded-lg !important;
+    transition: 0.2s ease-out transform, 0s ease-out background-color, 0.2s ease-out left, 0.2s ease-out right, 280ms ease-out box-shadow, 0.25s ease-out max-width, 0.25s ease-out width !important;
+
+    &::before {
+      border-radius: $rounded-lg;
+      background-color: transparent !important;
+    }
+    &:hover {
+      @include shadow-lg;
+      transform: translateY(-3px);
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+// Common Styling
+.mz-container--shaped {
+  transition: $transition-bg-theme !important;
+  border-radius: $rounded-lg !important;
+  @include shadow-lg;
+}
