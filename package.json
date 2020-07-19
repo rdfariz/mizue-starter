@@ -11,7 +11,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build --standalone --no-lock --config-file nuxt.config.js",
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
