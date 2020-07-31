@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 export default {
   /*
   ** Nuxt rendering mode
@@ -22,6 +25,13 @@ export default {
     ]
   },
   /*
+  ** Customize the progress-bar color
+  */
+  loading: {
+    color: '#F3F3F3',
+    height: '4px'
+  },
+  /*
   ** Global CSS
   */
   css: [
@@ -40,6 +50,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/axios'
   ],
   /*
   ** Auto import components
@@ -60,7 +71,10 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    // Doc: https://github.com/nuxt/content
+    '@nuxt/content'
   ],
   /*
   ** Axios module configuration
