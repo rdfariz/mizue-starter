@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Mizue Starter Project",
   "keywords": [
-		"starter project",
-		"empty project"
+    "starter project",
+    "empty project"
   ],
   "author": "Mizue",
   "license": "Envato",
@@ -21,8 +21,11 @@
   },
   "dependencies": {
     "@nuxtjs/vuetify": "^1.11.2",
+    "@nuxt/content": "^1.3.2",
     "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "dotenv": "^8.2.0",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
