@@ -5,6 +5,7 @@
     :color="color"
     class="pa-3 mz-card--hover"
     :to="to"
+    outlined
     @click="onClick"
   >
     <v-layout row wrap justify-center align-center class="ma-0">
@@ -27,14 +28,12 @@
           class="ma-auto"
         />
       </v-flex>
-      <v-flex xs12>
-        <v-card-title v-if="title || data.title" primary-title class="text-center justify-center">
-          {{ title || data.title }}
-        </v-card-title>
-        <v-card-text v-if="text || data.text" class="text-center">
-          {{ text || data.text }}
-        </v-card-text>
-      </v-flex>
+      <v-card-title v-if="title || data.title" primary-title class="text-center justify-center">
+        {{ title || data.title }}
+      </v-card-title>
+      <v-card-text v-if="text || data.text" class="text-center">
+        {{ text || data.text }}
+      </v-card-text>
     </v-layout>
   </v-card>
 </template>
@@ -119,8 +118,10 @@ export default {
   },
   methods: {
     syncHeightImageContent (overPoint) {
-      const clippedHeight = this.$refs.imageContent.clientHeight - overPoint
-      this.heightImageContent = clippedHeight
+      if (this.src) {
+        const clippedHeight = this.$refs.imageContent.clientHeight - overPoint
+        this.heightImageContent = clippedHeight
+      }
     }
   }
 }
