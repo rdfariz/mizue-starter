@@ -20,15 +20,14 @@
             </v-card>
           </v-flex>
         </v-layout>
-        <v-layout justify-center wrap>
-          <v-flex
-            v-for="(data, index) in headerInfoPotrait"
-            :key="index"
-            xs12
-            md6
-            lg4
-            class="my-2"
-          >
+        <swiper
+          ref="mySwiper"
+          :options="swiperOptions"
+          :delete-instance-on-destroy="true"
+          :cleanup-styles-on-destroy="false"
+          class="pa-10"
+        >
+          <swiper-slide v-for="(data, index) in headerInfoPotrait" :key="index">
             <card-product
               :src="data.src"
               :title="data.title"
@@ -36,11 +35,10 @@
               :clipped="false"
               size-image="20"
               over-point="50"
-              class="ma-4"
               to="/"
             />
-          </v-flex>
-        </v-layout>
+          </swiper-slide>
+        </swiper>
       </v-flex>
     </v-layout>
   </v-container>
@@ -77,7 +75,29 @@ export default {
         src: kingdom,
         color: 'red'
       }
-    ]
+    ],
+    swiperOptions: {
+      speed: 1000,
+      spaceBetween: 25,
+      slidesPerView: 1,
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      breakpoints: {
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 1
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 2
+        },
+        1200: {
+          slidesPerView: 3
+        }
+      }
+    }
   })
 }
 </script>

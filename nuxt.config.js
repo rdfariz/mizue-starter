@@ -50,7 +50,8 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/axios'
+    '~/plugins/axios',
+    { src: '~/plugins/vue-swiper.js', ssr: false }
   ],
   /*
   ** Auto import components
@@ -72,9 +73,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/dotenv',
-    // Doc: https://github.com/nuxt/content
-    '@nuxt/content'
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Axios module configuration
